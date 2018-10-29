@@ -27,7 +27,8 @@ RUN set -x \
     && mkdir -p $KAFKA_HOME \
     && chmod a+x /tmp/kafka_download.sh
 
-RUN /tmp/kafka_download.sh
+RUN /tmp/kafka_download.sh \
+    && chmod -R 777 ${KAFKA_HOME}
 
 RUN set -x \
     && rm -rf /tmp/kafka_download.sh \
