@@ -50,6 +50,6 @@ RUN set -x \
 USER $KAFKA_USER
 WORKDIR $KAFKA_HOME
 
-EXPOSE $SERVER_port
+EXPOSE $SERVER_port, 30092
 
 CMD kafka_server.sh start
